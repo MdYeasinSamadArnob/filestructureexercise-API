@@ -9,5 +9,5 @@ dotenv_1.default.config({ path: path_1.default.join(process.cwd(), ".env") });
 exports.default = {
     env: process.env.NODE_ENV,
     port: process.env.PORT,
-    database_url: 'mongodb+srv://yeasinsamadarnob:Klufuv8XWoce70ye@cluster0.wr1wfuo.mongodb.net/?retryWrites=true&w=majority',
+    database_url: process.env.DATABASE_URL,
 };
