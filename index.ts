@@ -4,16 +4,14 @@ import config from "./config";
 
 async function serverStart() {
   try {
-    // await mongoose.connect(
-    //   "mongodb://localhost:27017/folderTree" as string
-    // );
+    
     await mongoose.connect(config.database_url as string)
-    console.log("Database Connected....😃");
+    console.log("Database running");
     app.listen(config.port, () => {
       console.log(`Server listening on port ${config.port}`);
     });
   } catch (error) {
-    console.log("Failed To Connect Database..😥", error);
+    console.log("Failed ", error);
   }
 }
 serverStart();
